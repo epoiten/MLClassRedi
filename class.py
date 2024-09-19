@@ -6,5 +6,3 @@ import seaborn as sns
 
 #%%t5tretretgfd
 
-trzgretzerzdfdfdcs
-tedgfd
