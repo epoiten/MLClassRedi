@@ -1,0 +1,23 @@
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+import joblib
+
+# Load the dataset
+data = load_iris()
+X = data.data
+y = data.target
+
+# Split the data
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.3, random_state=42)
+
+# Train the Decision Tree model
+model = DecisionTreeClassifier()
+model.fit(X_train, y_train)
+
+# Save the trained model to a file
+joblib.dump(model, 'decision_tree_model.pkl')
+
+print("Model saved successfully!")
+pip install streamlit joblib
+streamlit run app.py
